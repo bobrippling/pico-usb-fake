@@ -1,0 +1,20 @@
+[package]
+name = "pico-usb-fake"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+defmt = "0.3"
+defmt-rtt = "0.3"
+
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-hal = { version = "0.2.5", features = ["unproven"] }
+
+#panic-probe = { version = "0.3", features = ["print-defmt"] }
+
+rp-pico = "0.5" # this uses usb-device 0.2.9
+
+usbd-storage = { version = "0.1.0", features = ["scsi", "defmt", "bbb"] }
+#usbd-storage = { path = "../deps/usbd-storage/", features = ["scsi", "defmt", "bbb"] }
+usb-device = "0.2.9"
